@@ -1,0 +1,2 @@
+ShowIntro();
+EvenGame(GetName());
