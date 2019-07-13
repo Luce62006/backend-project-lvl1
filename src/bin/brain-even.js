@@ -1,20 +1,30 @@
+#!/usr/bin/env node
+
 import readlineSync from 'readline-sync';
 
-
 const EvenGame = (name) => {
-  const correct = 0;
   // eslint-disable-next-line no-plusplus
   for (let i = 0; i < 3; i++) {
     const min = 1;
-    const max = 100;
-    const item = Math.random() * (+max - +min) + min;
-    console.log(`Hello, ${item}!`);
+    const max = 10;
+    const item = Math.floor(Math.random() * (max - min + 1)) + min;
+    console.log('Answer "yes" if number even otherwise answer "no".');
+    console.log(`Question: ${item}`);
     const answer = readlineSync.question('Your answer:');
-    const even = item % 2 === 0;
-    const actual = answer === 'yes';
-    if (even === actual) { console.log('Correct!'); }
-  }
-  if (correct === 3) { console.log(`Hello, ${name}!`); }
-};
 
+    if (item % 2 === 0 && answer === 'no') {
+      console.log(`Is wrong answer!Correct answer was "yes".
+      Let's try again!`);
+    }
+    if (item % 2 === 0 && answer === 'yes') {
+      console.log('Correct!');
+    }
+    if (item % 2 !== 0 && answer === 'no') {
+      console.log('Correct!');
+    }
+    if (item % 2 !== 0 && answer === 'yes') {
+      console.log('Is wrong answer! ;(. Correct answer was "no"');
+    }
+  }
+};
 export default EvenGame;
