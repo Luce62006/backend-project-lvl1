@@ -11,7 +11,7 @@ start2:
 
 run:
 	# npx babel-node --'src/bin/brain-even.js'
-
+    # npx babel-node --'src/bin/brain-calc.js'
 install-deps:
 	npm install
 
