@@ -10,6 +10,6 @@ console.log('Welcome to the Brain Games!');
 const name = GetName();
 
 console.log(`Hello, ${name}`);
-EvenGame();
+EvenGame(name);
 calcGame();
 gcdGame();
