@@ -6,3 +6,7 @@
 <https://travis-ci.org/travis-ci/travis-web.svg?branch=master>
 
  <https://asciinema.org/a/HtYhTXurN5AdwSP7x7dYU2btn>
+ <https://asciinema.org/a/ijEBnic7k1mw6RzChXAhzFl6i>
+ <https://asciinema.org/a/OsXrIfqeYjiU7zyLFHB9WG2Eu>
+ <https://asciinema.org/a/5FEvNJpCbQ7wzvbTh5bB3Hfd9>
+ 
