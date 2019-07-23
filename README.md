@@ -5,4 +5,4 @@
 <https://travis-ci.com/Luce62006/backend-project-lvl1.svg?branch=master>
 <https://travis-ci.org/travis-ci/travis-web.svg?branch=master>
 
-<https://asciinema.org/a/znUbplcQk6PsZF2DWmX4btUlA>
+ <https://asciinema.org/a/HtYhTXurN5AdwSP7x7dYU2btn>
