@@ -23,7 +23,7 @@ const calcGame = (name) => {
     const item1 = Math.floor(Math.random() * (max - min + 1)) + min;
     const item2 = Math.floor(Math.random() * (max - min + 1)) + min;
     const sign = makeid(1);
-    const example1 = item1 sign item2;
+    const example1 = eval(`item1 ${sign} item2`);
     console.log(`Question: ${item1} ${sign} ${item2}`);
     const answer1 = readlineSync.question('Your answer: ');
 
