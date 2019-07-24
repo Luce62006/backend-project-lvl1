@@ -21,11 +21,15 @@ const maxN = 10;
 const nSign = Math.floor(Math.random() * (maxN - minN + 1)) + minN;
 
 
-const answer = signA1 + difD(nSign - 1);
+const answer = signA1 + difD * (nSign - 1);
 
-const question = (signA1, difD, nSign) => {
-  const n = 10;
-  for (let i = 1; i <= n; i++) {
-    return toString(signA1 + difD * (nSign - 1));
+const question = (signA1, difD, ) => {
+  let n = 10;
+  let result = " ";
+  for (; n>=1; n--) {
+  currChar = signA1 + difD * (n - 1);
+    result =`${result} ${currChar}`;
   }
+  return result;
 };
+
