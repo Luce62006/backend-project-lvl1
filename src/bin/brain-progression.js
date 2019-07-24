@@ -5,16 +5,27 @@ import GetName from '../index.js';
 
 const name = GetName();
 
-const element = (length) => {
-    let result = '..';
-    const characters = '1 3 6+-*';
-    const charactersLength = characters.length;
-    for (let i = 0; i < length; i++) {
-      result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    }
-    return result;
-  };
 
-const gameProgression = (name) => {
-  console.log('What number is missing in the progression?');
+const min = 1;
+const max = 5;
+const signA1 = Math.floor(Math.random() * (max - min + 1)) + min;
+
+
+const minD = 2;
+const maxD = 4;
+const difD = Math.floor(Math.random() * (maxD - minD + 1)) + minD;
+
+
+const minN = 1;
+const maxN = 10;
+const nSign = Math.floor(Math.random() * (maxN - minN + 1)) + minN;
+
+
+const answer = signA1 + difD(nSign - 1);
+
+const question = (signA1, difD, nSign) => {
+  const n = 10;
+  for (let i = 1; i <= n; i++) {
+    return toString(signA1 + difD * (nSign - 1));
+  }
 };
