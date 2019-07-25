@@ -28,7 +28,7 @@ const question = (signA1, difD) => {
   let n = 10;
   let result = ' ';
   for (; n >= 1; n--) {
-    currchar = signA1 + difD * (n - 1);
+  currchar = signA1 + difD * (n - 1);
     result = `${result} ${currchar}`;
   }
   return result;
