@@ -22,10 +22,9 @@ const evenGame = (name) => {
     else if (answer === correctanswer) {
       console.log('Correct!');
     } else {
-      console.log(`Is wrong answer! Let's try again!${name}`);
+      console.log(`${answer} Is wrong answer!Correct answer is ${correctanswer}. Let's try again!${name}`);
       return;
     }
-  
   }
 };
 
