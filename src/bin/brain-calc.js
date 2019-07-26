@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
 import readlineSync from 'readline-sync';
-import GetName from '../index.js';
+import getName from '..';
 
-const name = GetName();
+const name = getName();
 
 const makeid = (length) => {
   let result = '';

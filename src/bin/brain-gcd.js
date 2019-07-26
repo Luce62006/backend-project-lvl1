@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
 import readlineSync from 'readline-sync';
-import GetName from '../index.js';
+import getName from '..';
 
-const name = GetName();
+const name = getName();
 
 const gcd = (item1, item2) => {
   if (item2 > 0) {
