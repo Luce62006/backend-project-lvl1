@@ -5,7 +5,6 @@
 
 [![Build Status](https://travis-ci.org/Luce62006/backend-project-lvl1.svg?branch=master)]
 
-<https://travis-ci.org/Luce62006/backend-project-lvl1.svg?branch=master>
 
 
  <https://asciinema.org/a/HtYhTXurN5AdwSP7x7dYU2btn>
