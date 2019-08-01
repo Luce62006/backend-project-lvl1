@@ -23,7 +23,6 @@ const isPrime = (num) => {
   }
 };
 
-
 const gamePrime = () => {
   // 1-й этап - вывод общеигрового приветствия
   console.log('Welcome to the Brain Games!');
@@ -57,4 +56,5 @@ const gamePrime = () => {
     }
   }
 };
+
 export default gamePrime;
