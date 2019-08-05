@@ -16,7 +16,6 @@ const maxN = 10;
 const gameProgression = () => {
   // 1-й этап - вывод общеигрового приветствия
   console.log('Welcome to the Brain Games!');
-  console.log();
   // 2-й этап - вывод описания игры
   console.log(' What number is missing in the progression?');
   console.log();
@@ -33,9 +32,7 @@ const gameProgression = () => {
     const difD = Math.floor(Math.random() * (maxD - minD + 1)) + minD;
     const nSign = Math.floor(Math.random() * (maxN - minN + 1)) + minN;
     const answer = signA1 + difD * (nSign - 1);
-    const question = (a, b) => {
-      const signA1 = a;
-      const difD = b;
+    const question = () => {
       let result = ' ';
       let currChar = ' ';
       for (let n = 1; n <= 10; n += 1) {
@@ -48,15 +45,16 @@ const gameProgression = () => {
       return result;
     };
     console.log(`Question: ${question(signA1, difD)}`);
-    const youranswer = readlineSync.question('Your answer:');
-    if (answer === youranswer && i === num) {
-      console.log(`Congratiulations, ${name}!`);
-    } else if (answer === youranswer) {
+    const youranswer = readlineSync.question('Your answer: ');
+
+    if (answer === eval(youranswer)) {
       console.log('Correct!');
     } else {
-      console.log(`${youranswer} Is wrong answer! Correct answer is ${answer}. Let's try again ${name}!`);
+      console.log(`${youranswer} Is wrong answer! Correct answer is ${answer}.`);
+      console.log(` Let's try again ${name}!`);
       return;
     }
   }
+  console.log(`Congratiulations, ${name}!`);
 };
 export default gameProgression;

@@ -14,7 +14,6 @@ const gcd = (item1, item2) => {
 const gcdGame = () => {
   // 1-й этап - вывод общеигрового приветствия
   console.log('Welcome to the Brain Games!');
-  console.log();
   // 2-й этап - вывод описания игры
   console.log('Find the greatest common divisor of given numbers.');
   console.log();
@@ -34,10 +33,9 @@ const gcdGame = () => {
     // eslint-disable-next-line no-loop-func
     const result = gcd(item1, item2);
     const answer = readlineSync.question('Your answer: ');
-    if (result === answer) {
+    if (result === eval(answer)) {
       console.log('Correct!');
-    }
-    if (answer !== result) {
+    } else if (answer !== result) {
       console.log(`${answer} is wrong answer! Correct answer was ${result}.
       Let's try again! ${name}`);
       return;

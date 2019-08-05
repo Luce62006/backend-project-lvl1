@@ -20,7 +20,6 @@ const max = 20;
 const calcGame = () => {
   // 1-й этап приветствие
   console.log('Welcome to the Brain Games!');
-  console.log();
   // 2-й этап - вывод описания игры
   console.log('What is the result of the expression?');
   console.log();
@@ -40,6 +39,7 @@ const calcGame = () => {
     const answer1 = readlineSync.question('Your answer: ');
     if (example1 === eval(answer1)) {
       console.log('Correct!');
+      
     } else {
       console.log(`${answer1} is wrong answer! Correct answer was ${example1}.
         Let's try again!${name}`);
