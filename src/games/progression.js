@@ -33,13 +33,11 @@ const gameProgression = () => {
     const difD = Math.floor(Math.random() * (maxD - minD + 1)) + minD;
     const nSign = Math.floor(Math.random() * (maxN - minN + 1)) + minN;
     const answer = signA1 + difD * (nSign - 1);
-    const question = (c, y) => {
-      const c = signA1;
-      const y = difD;
+    const question = (signA1, difD) => {
       let result = ' ';
       let currChar = ' ';
       for (let n = 1; n <= 10; n += 1) {
-        currChar = c + y * (n - 1);
+        currChar = signA1 + difD * (n - 1);
         if (currChar === answer) {
           currChar = '..';
         }
