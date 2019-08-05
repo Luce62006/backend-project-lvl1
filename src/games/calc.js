@@ -39,7 +39,6 @@ const calcGame = () => {
     const answer1 = readlineSync.question('Your answer: ');
     if (example1 === eval(answer1)) {
       console.log('Correct!');
-      
     } else {
       console.log(`${answer1} is wrong answer! Correct answer was ${example1}.
         Let's try again!${name}`);

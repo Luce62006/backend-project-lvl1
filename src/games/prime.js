@@ -17,13 +17,15 @@ const isPrime = (num) => {
   }
   for (let i = 2; i < Math.sqrt(num); i += 1) {
     if (num % i === 0) {
-      console.log('yes');
-      return;
+      // eslint-disable-next-line consistent-return
+      return ('no');
     }
-    console.log('no');
-    return;
+
+    // eslint-disable-next-line consistent-return
+    return ('yes');
   }
 };
+
 
 const gamePrime = () => {
   // 1-й этап - вывод общеигрового приветствия
@@ -48,15 +50,14 @@ const gamePrime = () => {
     console.log(`Question: ${question}`);
     const correctanswer = isPrime(question);
     const answer = readlineSync.question('Your answer:');
-    if (answer === correctanswer && i === num) {
-      console.log(`Congratiulations, ${name}!`);
-    } else if (answer === correctanswer) {
+    if (answer == correctanswer) {
       console.log('Correct!');
     } else {
-      console.log(`Is wrong answer! Let's try again!${name}`);
+      console.log(`Is wrong answer! The correct answer is  "${correctanswer}" Let's try again!${name}`);
       return;
     }
   }
+  console.log(`Congratiulations, ${name}!`);
 };
 
 export default gamePrime;
