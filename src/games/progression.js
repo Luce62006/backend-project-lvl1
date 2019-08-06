@@ -47,7 +47,7 @@ const gameProgression = () => {
     console.log(`Question: ${question(signA1, difD)}`);
     const youranswer = readlineSync.question('Your answer: ');
 
-    if (answer === eval(youranswer)) {
+    if (answer === Number(youranswer)) {
       console.log('Correct!');
     } else {
       console.log(`${youranswer} Is wrong answer! Correct answer is ${answer}.`);

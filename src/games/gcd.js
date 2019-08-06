@@ -33,7 +33,7 @@ const gcdGame = () => {
     // eslint-disable-next-line no-loop-func
     const result = gcd(item1, item2);
     const answer = readlineSync.question('Your answer: ');
-    if (result === eval(answer)) {
+    if (result === Number(answer)) {
       console.log('Correct!');
     } else if (answer !== result) {
       console.log(`${answer} is wrong answer! Correct answer was ${result}.

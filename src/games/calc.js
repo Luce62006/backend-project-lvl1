@@ -34,10 +34,10 @@ const calcGame = () => {
     const number1 = Math.floor(Math.random() * (max - min + 1)) + min;
     const number2 = Math.floor(Math.random() * (max - min + 1)) + min;
     const signofMathOperation = makeid(1);
-    const example1 = eval(`number1 ${signofMathOperation} number2`);
+    const example1 = Number(`number1 ${signofMathOperation} number2`);
     console.log(`Question: ${number1} ${signofMathOperation} ${number2}`);
     const answer1 = readlineSync.question('Your answer: ');
-    if (example1 === eval(answer1)) {
+    if (example1 === Number(answer1)) {
       console.log('Correct!');
     } else {
       console.log(`${answer1} is wrong answer! Correct answer was ${example1}.

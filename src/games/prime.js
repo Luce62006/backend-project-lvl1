@@ -50,7 +50,7 @@ const gamePrime = () => {
     console.log(`Question: ${question}`);
     const correctanswer = isPrime(question);
     const answer = readlineSync.question('Your answer:');
-    if (answer == correctanswer) {
+    if (answer === correctanswer) {
       console.log('Correct!');
     } else {
       console.log(`Is wrong answer! The correct answer is  "${correctanswer}" Let's try again!${name}`);
