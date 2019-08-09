@@ -3,7 +3,7 @@ import getName from '.';
 
 const roundsNumber = 3;
 
-const engine = (description, getQuestion, getCorrectAnswer) => {
+const engine = (description, getDate) => {
   // 1-й этап - вывод общеигрового приветствия
   console.log('Welcome to the Brain Games!');
   console.log();
