@@ -1,4 +1,6 @@
-import { cons, car, cdr, toString } from '@hexlet/pairs';
+import {
+  cons, car, cdr, toString,
+} from '@hexlet/pairs';
 import engine from '../engine';
 
 
@@ -9,12 +11,17 @@ const max = 10;
 
 const evenGame = () => {
   const description = 'Answer "yes" if number even otherwise answer "no".';
-  const getQuestion = () => Math.floor(Math.random() * (max - min + 1)) + min;
-  const getCorrectAnswer = s => (isEven(s) ? 'yes' : 'no');
-  const date = [getQuestion(), getCorrectAnswer()];
+  const getQuestionAndCorrectAnswer = () => {
+    const getQuestion = () => Math.floor(Math.random() * (max - min + 1)) + min;
+    const s = getQuestion();
+    const getCorrectAnswer = () => (isEven(s) ? 'yes' : 'no');
+    const d = getCorrectAnswer();
+    const date = [s, d];
 
+    return date;
+  };
 
-  engine(description, date);
+  engine(description, getQuestionAndCorrectAnswer);
 };
 
 export default evenGame;
