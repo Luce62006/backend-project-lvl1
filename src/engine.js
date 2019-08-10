@@ -1,9 +1,12 @@
 import readlineSync from 'readline-sync';
 import getName from '.';
 
+const min = 1;
+const max = 10;
+
 const roundsNumber = 3;
 
-const engine = (description, getDate) => {
+const engine = (description, date) => {
   // 1-й этап - вывод общеигрового приветствия
   console.log('Welcome to the Brain Games!');
   console.log();
@@ -21,10 +24,10 @@ const engine = (description, getDate) => {
 
   // 5-й этап - играем раунды
   for (let i = 1; i <= roundsNumber; i += 1) {
-    const question = getQuestion();
+    const question = date[0];
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
-    const correctAnswer = getCorrectAnswer(question);
+    const correctAnswer = date[1];
     if (answer === correctAnswer) {
       console.log('Correct!');
       console.log();
