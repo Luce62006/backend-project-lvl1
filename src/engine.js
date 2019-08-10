@@ -1,5 +1,6 @@
 import readlineSync from 'readline-sync';
 import getName from '.';
+import evenGame from './games/even';
 
 const min = 1;
 const max = 10;
