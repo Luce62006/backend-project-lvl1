@@ -1,5 +1,4 @@
-import readlineSync from 'readline-sync';
-import getName from '..';
+import engine from '../engine';
 
 
 const makeid = (length) => {
@@ -12,26 +11,14 @@ const makeid = (length) => {
   return result;
 };
 
-const roundsNumber = 3;
 
 const min = 1;
 const max = 20;
 
 const calcGame = () => {
-  // 1-й этап приветствие
-  console.log('Welcome to the Brain Games!');
-  // 2-й этап - вывод описания игры
-  console.log('What is the result of the expression?');
+  const description = 'What is the result of the expression?';
   console.log();
-  // 3-й этап - запрос имени у пользователя
-  const name = getName();
-  // 4-й этап - приветствие пользователя
-  console.log(`Hello, ${name}!`);
-  console.log();
-  // 5-й этап - играем раунды
-
-  for (let i = 1; i <= roundsNumber; i += 1) {
-    const number1 = Math.floor(Math.random() * (max - min + 1)) + min;
+   const number1 = Math.floor(Math.random() * (max - min + 1)) + min;
     const number2 = Math.floor(Math.random() * (max - min + 1)) + min;
     const signofMathOperation = makeid(1);
     const example1 = Number(`number1 ${signofMathOperation} number2`);
