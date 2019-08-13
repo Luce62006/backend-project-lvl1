@@ -15,24 +15,39 @@ const makeid = (length) => {
 const min = 1;
 const max = 20;
 
+
+// eslint-disable-next-line consistent-return
+const getSign = (number1, sign, number2) => {
+  if (sign === '+') {
+    return number1 + number2;
+  }
+  if (sign === '-') {
+    return number1 - number2;
+  }
+  if (sign === '*') {
+    return number1 * number2;
+  }
+};
+
 const calcGame = () => {
   const description = 'What is the result of the expression?';
   console.log();
-   const number1 = Math.floor(Math.random() * (max - min + 1)) + min;
+  const getQuestionAndCorrectAnswer = () => {
+    const number1 = Math.floor(Math.random() * (max - min + 1)) + min;
     const number2 = Math.floor(Math.random() * (max - min + 1)) + min;
     const signofMathOperation = makeid(1);
-    const example1 = Number(`number1 ${signofMathOperation} number2`);
-    console.log(`Question: ${number1} ${signofMathOperation} ${number2}`);
-    const answer1 = readlineSync.question('Your answer: ');
-    if (example1 === Number(answer1)) {
-      console.log('Correct!');
-    } else {
-      console.log(`${answer1} is wrong answer! Correct answer was ${example1}.
-        Let's try again!${name}`);
-      return;
-    }
-  }
-  console.log(`Congratulations, ${name}!`);
+
+    const correctanswer = getSign(number1, signofMathOperation, number2);
+
+    const question = `${number1} ${signofMathOperation} ${number2}`;
+
+    const a = question;
+    const b = String(correctanswer);
+    const date = [a, b];
+
+    return date;
+  };
+  engine(description, getQuestionAndCorrectAnswer);
 };
 
 export default calcGame;

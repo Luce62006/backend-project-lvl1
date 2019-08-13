@@ -1,8 +1,6 @@
 import readlineSync from 'readline-sync';
 import getName from '.';
 
-const min = 1;
-const max = 10;
 
 const roundsNumber = 3;
 
