@@ -1,16 +1,6 @@
 import engine from '../engine';
+import getRundomNum from '../utils';
 
-
-const min = 1;
-const max = 5;
-
-
-const minD = 2;
-const maxD = 4;
-
-
-const minN = 1;
-const maxN = 10;
 
 const gameProgression = () => {
   const description = ' What number is missing in the progression?';
@@ -18,15 +8,16 @@ const gameProgression = () => {
   // 3-й этап - запрос имени у пользователя
 
   const getQuestionAndCorrectAnswer = () => {
-    const signA1 = Math.floor(Math.random() * (max - min + 1)) + min;
-    const difD = Math.floor(Math.random() * (maxD - minD + 1)) + minD;
-    const nSign = Math.floor(Math.random() * (maxN - minN + 1)) + minN;
-    const answer = signA1 + difD * (nSign - 1);
+    const firstMemberProgression = getRundomNum(1, 5);
+    const progressionDifference = getRundomNum(2, 4);
+    const progressionMemberNumber = getRundomNum(10, 1);
+    const answer = firstMemberProgression + progressionDifference * (progressionMemberNumber - 1);
     const question = () => {
+      const y = 10;
       let result = ' ';
       let currChar = ' ';
-      for (let n = 1; n <= 10; n += 1) {
-        currChar = signA1 + difD * (n - 1);
+      for (let n = 1; n <= y; n += 1) {
+        currChar = firstMemberProgression + progressionDifference * (n - 1);
         if (currChar === answer) {
           currChar = '..';
         }
@@ -36,8 +27,8 @@ const gameProgression = () => {
     };
     const a = question();
     const b = String(answer);
-    const date = [a, b];
-    return date;
+    const info = [a, b];
+    return info;
   };
   engine(description, getQuestionAndCorrectAnswer);
 };

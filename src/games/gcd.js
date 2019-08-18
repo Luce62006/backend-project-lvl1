@@ -1,4 +1,5 @@
 import engine from '../engine';
+import getRundomNum from '../utils';
 
 const gcd = (item1, item2) => {
   if (item2 > 0) {
@@ -11,22 +12,15 @@ const gcd = (item1, item2) => {
 
 const gcdGame = () => {
   const description = 'Find the greatest common divisor of given numbers.';
-  console.log();
-
-
-  const min = 1;
-  const max = 100;
   const getQuestionAndCorrectAnswer = () => {
-    const item1 = Math.floor(Math.random() * (max - min + 1)) + min;
-    const item2 = Math.floor(Math.random() * (max - min + 1)) + min;
+    const item1 = getRundomNum(1, 30);
+    const item2 = getRundomNum(1, 30);
     const question = (`${item1} ${item2}`);
-    console.log(question);
     const a = question;
     const result = gcd(item1, item2);
-    console.log(result);
     const b = String(result);
-    const date = [a, b];
-    return date;
+    const result2 = [a, b];
+    return result2;
   };
   engine(description, getQuestionAndCorrectAnswer);
 };

@@ -1,44 +1,21 @@
 import engine from '../engine';
-
+import getRundomNum from '../utils';
 
 const isPrime = (num) => {
-  if (num < 1) {
-    console.log('no');
-    return;
-  }
-  if (num === 1) {
-    console.log('yes');
-    return;
-  }
-  if (num === 2) {
-    console.log('yes');
-    return;
-  }
-  for (let i = 2; i < Math.sqrt(num); i += 1) {
-    if (num % i === 0) {
-      // eslint-disable-next-line consistent-return
-      return ('no');
-    }
-
-    // eslint-disable-next-line consistent-return
-    return ('yes');
-  }
+  for (let i = 2; i < num; i++) { if (num % i === 0) return false; }
+  return num > 1;
 };
-
 
 const gamePrime = () => {
   const description = `Answer "yes" if given number is prime. 
     Otherwise answer "no"`;
   const getQuestionAndCorrectAnswer = () => {
-    const min = 1;
-    const max = 300;
-    const question = Math.floor(Math.random() * (max - min + 1)) + min;
-
-    const correctanswer = isPrime(question);
+    const question = getRundomNum(1, 300);
+    const correctanswer = () => (isPrime(question) ? 'yes' : 'no');
     const a = question;
-    const b = correctanswer;
-    const date = [a, b];
-    return date;
+    const b = correctanswer();
+    const info = [a, b];
+    return info;
   };
   engine(description, getQuestionAndCorrectAnswer);
 };
