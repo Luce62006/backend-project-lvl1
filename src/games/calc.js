@@ -15,18 +15,21 @@ const randomChoiceOfMathSign = (length) => {
 
 
 const getSign = (number1, sign, number2) => {
+  let result;
   switch (sign) {
     case '+':
-      return number1 + number2;
+      result = number1 + number2;
 
-
+      break;
     case ('-'):
-      return number1 - number2;
+      result = number1 - number2;
 
-
+      break;
     case ('*'):
-      return number1 * number2;
+      result = number1 * number2;
+      break;
   }
+  return result;
 };
 
 const calcGame = () => {

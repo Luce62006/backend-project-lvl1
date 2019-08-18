@@ -10,7 +10,7 @@ const description = 'Answer "yes" if number even otherwise answer "no".';
 
 const getQuestionAndCorrectAnswer = () => {
   const question = getRundomNum(1, 30);
-  const getCorrectAnswer = () => (isEven(s) ? 'yes' : 'no');
+  const getCorrectAnswer = () => (isEven(question) ? 'yes' : 'no');
   const corrAnswer = getCorrectAnswer();
   const info = [question, corrAnswer];
 
