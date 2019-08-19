@@ -1,20 +1,23 @@
 import engine from '../engine';
-
 import getRundomNum from '../utils';
 
-
 const isEven = num => num % 2 === 0;
+
+const getCorrectAnswer = (question) => {
+  if (isEven(question)) {
+    return 'yes';
+  }
+  return 'no';
+};
 
 
 const description = 'Answer "yes" if number even otherwise answer "no".';
 
 const getQuestionAndCorrectAnswer = () => {
   const question = getRundomNum(1, 30);
-  const getCorrectAnswer = () => (isEven(question) ? 'yes' : 'no');
   const corrAnswer = getCorrectAnswer();
-  const info = [question, corrAnswer];
-
-  return info;
+  const infoEvenGame = [question, corrAnswer];
+  return infoEvenGame;
 };
 
 const evenGame = () => {
