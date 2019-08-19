@@ -10,7 +10,6 @@ const getCorrectAnswer = (question) => {
   return 'no';
 };
 
-
 const description = 'Answer "yes" if number even otherwise answer "no".';
 
 const getQuestionAndCorrectAnswer = () => {

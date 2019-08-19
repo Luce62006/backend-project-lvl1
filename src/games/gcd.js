@@ -6,7 +6,6 @@ const gcd = (item1, item2) => {
     const k = item1 % item2;
     return gcd(item2, k);
   }
-
   return Math.abs(item1);
 };
 
@@ -18,8 +17,8 @@ const getQuestionAndCorrectAnswer = () => {
   const newQuestion = question;
   const result = gcd(item1, item2);
   const newResult = String(result);
-  const info = [newQuestion, newResult];
-  return info;
+  const infoGcdGame = [newQuestion, newResult];
+  return infoGcdGame;
 };
 
 const gcdGame = () => {

@@ -23,8 +23,8 @@ const getQuestionAndCorrectAnswer = () => {
   };
   const newQuestion = question();
   const answerAsString = String(answer);
-  const info = [newQuestion, answerAsString];
-  return info;
+  const infoGameProgression = [newQuestion, answerAsString];
+  return infoGameProgression;
 };
 
 const gameProgression = () => {

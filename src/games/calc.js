@@ -1,4 +1,3 @@
-/* eslint-disable default-case */
 import engine from '../engine';
 import getRundomNum from '../utils';
 
@@ -33,15 +32,12 @@ const getQuestionAndCorrectAnswer = () => {
   const number1 = getRundomNum(1, 30);
   const number2 = getRundomNum(1, 30);
   const signofMathOperation = randomChoiceOfMathSign(1);
-
   const correctAnswer = getSign(number1, signofMathOperation, number2);
-
   const question = `${number1} ${signofMathOperation} ${number2}`;
-
   const newCorrectAnswer = String(correctAnswer);
-  const result = [question, newCorrectAnswer];
+  const infoCalcGame = [question, newCorrectAnswer];
 
-  return result;
+  return infoCalcGame;
 };
 
 const calcGame = () => {
