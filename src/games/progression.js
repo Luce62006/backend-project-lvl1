@@ -4,8 +4,6 @@ import getRundomNum from '../utils';
 
 const gameProgression = () => {
   const description = ' What number is missing in the progression?';
-  console.log();
-  // 3-й этап - запрос имени у пользователя
 
   const getQuestionAndCorrectAnswer = () => {
     const firstMemberProgression = getRundomNum(1, 5);
@@ -13,10 +11,10 @@ const gameProgression = () => {
     const progressionMemberNumber = getRundomNum(10, 1);
     const answer = firstMemberProgression + progressionDifference * (progressionMemberNumber - 1);
     const question = () => {
-      const y = 10;
+      const numberOfDigits = 10;
       let result = ' ';
       let currChar = ' ';
-      for (let n = 1; n <= y; n += 1) {
+      for (let n = 1; n <= numberOfDigits; n += 1) {
         currChar = firstMemberProgression + progressionDifference * (n - 1);
         if (currChar === answer) {
           currChar = '..';
@@ -25,9 +23,9 @@ const gameProgression = () => {
       }
       return result;
     };
-    const a = question();
-    const b = String(answer);
-    const info = [a, b];
+    const  newQuestion = question();
+    const answerAsString = String(answer);
+    const info = [newQuestion, answerAsString];
     return info;
   };
   engine(description, getQuestionAndCorrectAnswer);

@@ -16,11 +16,11 @@ const gcdGame = () => {
     const item1 = getRundomNum(1, 30);
     const item2 = getRundomNum(1, 30);
     const question = (`${item1} ${item2}`);
-    const a = question;
+    const newQuestion = question;
     const result = gcd(item1, item2);
-    const b = String(result);
-    const result2 = [a, b];
-    return result2;
+    const newResult = String(result);
+    const info = [newQuestion, newResult];
+    return info;
   };
   engine(description, getQuestionAndCorrectAnswer);
 };

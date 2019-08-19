@@ -8,7 +8,7 @@ const randomChoiceOfMathSign = (length) => {
   const characters = '+-*';
   const charactersLength = characters.length;
   for (let i = 0; i < length; i += 1) {
-    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    result += characters.charAt(getRundomNum(0, 1));
   }
   return result;
 };
@@ -19,11 +19,9 @@ const getSign = (number1, sign, number2) => {
   switch (sign) {
     case '+':
       result = number1 + number2;
-
       break;
     case ('-'):
       result = number1 - number2;
-
       break;
     case ('*'):
       result = number1 * number2;
