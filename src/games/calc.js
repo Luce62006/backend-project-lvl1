@@ -23,6 +23,7 @@ const getSign = (number1, sign, number2) => {
     case ('*'):
       result = number1 * number2;
       break;
+      default:
   }
   return result;
 };
