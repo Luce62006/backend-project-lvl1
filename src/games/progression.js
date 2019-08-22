@@ -2,24 +2,25 @@ import engine from '../engine';
 import getRundomNum from '../utils';
 
 const description = ' What number is missing in the progression?';
-
+const lengthOfProgression = 10;
 const getQuestionAndCorrectAnswer = () => {
-  const firstMemberProgression = getRundomNum(1, 5);
+  const firstMember = getRundomNum(1, 5);
   const progressionDifference = getRundomNum(2, 4);
-  const progressionMemberNumber = getRundomNum(10, 1);
-  const answer = firstMemberProgression + progressionDifference * (progressionMemberNumber - 1);
+  const hiddenElementPosition = getRundomNum(lengthOfProgression, 1);
+  const answer = firstMember + progressionDifference * hiddenElementPosition;
+ 
   const question = () => {
-    const numberOfDigits = 10;
+    
     let result = ' ';
     let currChar = ' ';
-    for (let n = 1; n <= numberOfDigits; n += 1) {
-      currChar = firstMemberProgression + progressionDifference * (n - 1);
+    for (let n = 0; n <= lengthOfProgression; n += 1) {
+      currChar = firstMember + progressionDifference * n ;
       if (currChar === answer) {
         currChar = '..';
       }
       result = `${result} ${currChar}`;
     }
-    return result;
+    return result.trim();
   };
   const newQuestion = question();
   const answerAsString = String(answer);

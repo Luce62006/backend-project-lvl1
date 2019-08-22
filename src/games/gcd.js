@@ -14,10 +14,9 @@ const getQuestionAndCorrectAnswer = () => {
   const item1 = getRundomNum(1, 30);
   const item2 = getRundomNum(1, 30);
   const question = (`${item1} ${item2}`);
-  const newQuestion = question;
   const result = gcd(item1, item2);
   const newResult = String(result);
-  const infoGcdGame = [newQuestion, newResult];
+  const infoGcdGame = [question, newResult];
   return infoGcdGame;
 };
 

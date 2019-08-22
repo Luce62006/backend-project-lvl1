@@ -1,7 +1,6 @@
 import readlineSync from 'readline-sync';
 import getName from '.';
 
-
 const roundsNumber = 3;
 
 const engine = (description, getQuestionAndCorrectAnswer) => {
@@ -22,9 +21,9 @@ const engine = (description, getQuestionAndCorrectAnswer) => {
 
   // 5-й этап - играем раунды
   for (let i = 1; i <= roundsNumber; i += 1) {
-    const a = getQuestionAndCorrectAnswer();
-    const question = a[0];
-    const correctAnswer = a[1];
+     let resultQuestionAndCorrectAnswer = getQuestionAndCorrectAnswer();
+    let question, correctAnswer;
+    [question, correctAnswer] = resultQuestionAndCorrectAnswer;
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
     if (answer === correctAnswer) {
