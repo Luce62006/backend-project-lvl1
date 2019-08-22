@@ -8,13 +8,13 @@ const getQuestionAndCorrectAnswer = () => {
   const progressionDifference = getRundomNum(2, 4);
   const hiddenElementPosition = getRundomNum(lengthOfProgression, 1);
   const answer = firstMember + progressionDifference * hiddenElementPosition;
-   const question = () => {
+  const question = () => {
     let result = ' ';
     let currChar = ' ';
     for (let n = 0; n <= lengthOfProgression; n += 1) {
-      currChar = firstMember + progressionDifference * n ;
+      currChar = firstMember + progressionDifference * n;
       if (currChar === answer) {
-      currChar = '..';
+        currChar = '..';
       }
       result = `${result} ${currChar}`;
     }

@@ -11,7 +11,7 @@ const description = `Answer "yes" if given number is prime.
 const getQuestionAndCorrectAnswer = () => {
   const question = getRundomNum(1, 300);
   const correctAnswer = () => (isPrime(question) ? 'yes' : 'no');
- const infoGamePrime = [question, correctAnswer()];
+  const infoGamePrime = [question, correctAnswer()];
   return infoGamePrime;
 };
 const gamePrime = () => {
