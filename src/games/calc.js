@@ -1,7 +1,7 @@
 import engine from '../engine';
 import getRandomNum from '../utils';
 
-const getSignofMathOperation = (mathSign) => mathSign.charAt(getRandomNum(0,2));
+const getSignofMathOperation = mathSign => (mathSign.charAt(getRandomNum(0, 2)));
 
 const getSign = (number1, sign, number2) => {
   let result;
