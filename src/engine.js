@@ -22,9 +22,7 @@ const engine = (description, getQuestionAndCorrectAnswer) => {
   // 5-й этап - играем раунды
   for (let i = 1; i <= roundsNumber; i += 1) {
     const resultQuestionAndCorrectAnswer = getQuestionAndCorrectAnswer();
-    let question;
-    let correctAnswer;
-    [question, correctAnswer] = resultQuestionAndCorrectAnswer;
+    let [question, correctAnswer] = resultQuestionAndCorrectAnswer;
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
     if (answer === correctAnswer) {

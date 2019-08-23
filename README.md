@@ -1,7 +1,6 @@
 # backend-project-lvl1
 
-<a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
-<a href="https://codeclimate.com/github/codeclimate/codeclimate/test_coverage"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage" /></a>
+<a href="https://codeclimate.com/github/Luce62006/project-lvl1-s454/maintainability"><img src="https://api.codeclimate.com/v1/badges/c93b711d2ec872857a80/maintainability" /></a>
 
 [![Build Status](https://travis-ci.org/Luce62006/backend-project-lvl1.svg?branch=master)](https://travis-ci.org/Luce62006/backend-project-lvl1)
 

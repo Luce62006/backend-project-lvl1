@@ -1,18 +1,17 @@
 import engine from '../engine';
-import getRundomNum from '../utils';
+import getRandomNum from '../utils';
 
 const description = ' What number is missing in the progression?';
 const lengthOfProgression = 10;
 const getQuestionAndCorrectAnswer = () => {
-  const firstMember = getRundomNum(1, 5);
-  const progressionDifference = getRundomNum(2, 4);
-  const hiddenElementPosition = getRundomNum(lengthOfProgression, 1);
+  const firstMember = getRandomNum(1, 5);
+  const progressionDifference = getRandomNum(2, 4);
+  const hiddenElementPosition = getRandomNum(lengthOfProgression, 1);
   const answer = firstMember + progressionDifference * hiddenElementPosition;
   const question = () => {
-    let result = ' ';
-    let currChar = ' ';
+    let result;
     for (let n = 0; n <= lengthOfProgression; n += 1) {
-      currChar = firstMember + progressionDifference * n;
+      let currChar = firstMember + progressionDifference * n;
       if (currChar === answer) {
         currChar = '..';
       }
