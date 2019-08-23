@@ -8,7 +8,7 @@ const isPrime = (num) => {
 
 const description = `Answer "yes" if given number is prime. 
     Otherwise answer "no"`;
-const getcorrectAnswer = (question) => (isPrime(question) ? 'yes' : 'no');
+const getcorrectAnswer = question => (isPrime(question) ? 'yes' : 'no');
 const getQuestionAndCorrectAnswer = () => {
   const question = getRandomNum(1, 300);
   const infoGamePrime = [question, getcorrectAnswer()];
