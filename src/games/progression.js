@@ -6,7 +6,7 @@ const lengthOfProgression = 10;
 const getQuestionAndCorrectAnswer = () => {
   const firstMember = getRandomNum(1, 5);
   const progressionDifference = getRandomNum(2, 4);
-  const hiddenElementPosition = getRandomNum(lengthOfProgression, 1);
+  const hiddenElementPosition = getRandomNum(lengthOfProgression - 1, 0);
   const answer = firstMember + progressionDifference * hiddenElementPosition;
   const question = () => {
     let result;
