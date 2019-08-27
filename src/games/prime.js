@@ -6,7 +6,7 @@ const isPrime = (num) => {
   return num > 1;
 };
 
-const description = `Answer "yes" if given number is prime. Otherwise answer "no"`;
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no"';
 const getcorrectAnswer = question => (isPrime(question) ? 'yes' : 'no');
 const getQuestionAndCorrectAnswer = () => {
   const question = getRandomNum(1, 300);
