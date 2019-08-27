@@ -9,3 +9,6 @@
     <https://asciinema.org/a/02fKvKZVBrvUTivCOgSUaGSQx>
     https://asciinema.org/a/MlIc653lMsrUbnV7r2iKQaB7H
 https://asciinema.org/a/MlIc653lMsrUbnV7r2iKQaB7H
+https://asciinema.org/a/bYuf31h82iOt2OPQ9hfSmKzP1
+https://asciinema.org/a/RWZj83aO3DqyK1xXn0WD9Gyyb
+https://asciinema.org/a/WbNey2JEspMBRtwA4VcyMiLYr
