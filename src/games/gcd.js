@@ -20,8 +20,4 @@ const getQuestionAndCorrectAnswer = () => {
   return gcdGameInfo;
 };
 
-const gcdGame = () => {
-  engine(description, getQuestionAndCorrectAnswer);
-};
-
-export default gcdGame;
+export default () => engine(description, getQuestionAndCorrectAnswer);

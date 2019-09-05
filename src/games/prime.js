@@ -14,8 +14,5 @@ const getQuestionAndCorrectAnswer = () => {
   const infoGamePrime = [question, correctAnswer];
   return infoGamePrime;
 };
-const gamePrime = () => {
-  engine(description, getQuestionAndCorrectAnswer);
-};
 
-export default gamePrime;
+export default () => engine(description, getQuestionAndCorrectAnswer);

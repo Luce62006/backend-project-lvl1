@@ -1,7 +1,8 @@
 import engine from '../engine';
 import getRandomNum from '../utils';
 
-const getSignofMathOperation = mathSign => (mathSign.charAt(getRandomNum(0, String(mathSign).length - 1)));
+const getSignofMathOperation = mathSign => 
+(mathSign.charAt(getRandomNum(0, String(mathSign).length - 1)));
 
 const getSign = (number1, sign, number2) => {
   let result;
@@ -33,8 +34,4 @@ const getQuestionAndCorrectAnswer = () => {
   return calcGameInfo;
 };
 
-const calcGame = () => {
-  engine(description, getQuestionAndCorrectAnswer);
-};
-
-export default calcGame;
+export default () => engine(description, getQuestionAndCorrectAnswer);
