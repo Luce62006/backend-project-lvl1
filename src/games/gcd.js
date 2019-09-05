@@ -15,9 +15,9 @@ const getQuestionAndCorrectAnswer = () => {
   const item2 = getRandomNum(1, 30);
   const question = (`${item1} ${item2}`);
   const result = gcd(item1, item2);
-  const newResult = String(result);
-  const infoGcdGame = [question, newResult];
-  return infoGcdGame;
+  const correctAnswer = String(result);
+  const gcdGameInfo = [question, correctAnswer];
+  return gcdGameInfo;
 };
 
 const gcdGame = () => {
