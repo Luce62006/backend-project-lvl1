@@ -8,10 +8,9 @@ const getprogressionDifference = () => getRandomNum(2, 4);
 
 const gethiddenElementPosition = () => getRandomNum(lengthOfProgression - 1, 0);
 
-const getQuestion = (lengthOfProgression, firstMember, progressionDifference, answer) => {
-  
+const getQuestion = (length, firstMember, progressionDifference, answer) => {
 let result = '';
-  for (let n = 0; n <= lengthOfProgression; n += 1) {
+   for (let n = 0; n <= length; n += 1) {
     let currChar = firstMember + progressionDifference * n;
     if (currChar === answer) {
       currChar = '..';
@@ -24,11 +23,12 @@ let result = '';
 const description = ' What number is missing in the progression?';
 
 const getQuestionAndCorrectAnswer = () => {
- const firstMember = getfirstMember();
+  const length = lengthOfProgression;
+  const firstMember = getfirstMember();
   const progressionDifference = getprogressionDifference();
   const hiddenElementPosition = gethiddenElementPosition();
   const answer = firstMember + progressionDifference * hiddenElementPosition;
-  const newQuestion = getQuestion(10, firstMember, progressionDifference, answer);
+  const newQuestion = getQuestion(length, firstMember, progressionDifference, answer);
   const answerAsString = String(answer);
   const GameProgressioninfo = [newQuestion, answerAsString];
   return GameProgressioninfo;
