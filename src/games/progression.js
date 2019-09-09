@@ -9,8 +9,8 @@ const getprogressionDifference = () => getRandomNum(2, 4);
 const gethiddenElementPosition = () => getRandomNum(lengthOfProgression - 1, 0);
 
 const getQuestion = (length, firstMember, progressionDifference, answer) => {
-let result = '';
-   for (let n = 0; n <= length; n += 1) {
+  let result = '';
+  for (let n = 0; n <= length; n += 1) {
     let currChar = firstMember + progressionDifference * n;
     if (currChar === answer) {
       currChar = '..';
