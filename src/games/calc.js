@@ -1,9 +1,8 @@
 import engine from '../engine';
 import getRandomNum from '../utils';
 
-const getSignofMathOperation = mathSign => (
+const getSignOfMathOperation = mathSign => (
   mathSign.charAt(getRandomNum(0, String(mathSign).length - 1)));
-
 
 const getSign = (number1, sign, number2) => {
   let result;
@@ -24,11 +23,12 @@ const getSign = (number1, sign, number2) => {
 
 const description = 'What is the result of the expression?';
 const getQuestionAndCorrectAnswer = () => {
+  const mathSign = '-+*';
   const number1 = getRandomNum(1, 30);
   const number2 = getRandomNum(1, 30);
-  const signofMathOperation = getSignofMathOperation('-+*');
-  const correctAnswer = getSign(number1, signofMathOperation, number2);
-  const question = `${number1} ${signofMathOperation} ${number2}`;
+  const signOfMathOperation = getSignOfMathOperation(mathSign);
+  const correctAnswer = getSign(number1, signOfMathOperation, number2);
+  const question = `${number1} ${signOfMathOperation} ${number2}`;
   const newCorrectAnswer = String(correctAnswer);
   const calcGameInfo = [question, newCorrectAnswer];
 
