@@ -8,7 +8,7 @@ const getprogressionDifference = () => getRandomNum(2, 4);
 
 const gethiddenElementPosition = () => getRandomNum(lengthOfProgression - 1, 0);
 
-const getQuestion = (lengthOfProgression, firstMember, progressionDifference, answer) => {
+const getQuestion = (firstMember, progressionDifference, answer) => {
   let result = '';
   for (let n = 0; n <= lengthOfProgression; n += 1) {
     let currChar = firstMember + progressionDifference * n;
